@@ -7,3 +7,13 @@
 body {
     font-family: 'Craftype', sans-serif;
 }
+
+@font-face {
+    font-family: 'Fairfax Pona HD';
+    src: url('fairfax-pona-hd.ttf') format('truetype');
+    font-display: swap;
+}
+
+body {
+    font-family: 'Fairfax Pona HD', sans-serif;
+}
