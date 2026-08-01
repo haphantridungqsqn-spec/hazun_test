@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Sitelen Pona writing</title>
+    
+    <script>
+        fetch('/hazun_test/templates/head.html')
+            .then(res => res.text())
+            .then(html => {
+                document.head.insertAdjacentHTML('beforeend', html);
+            })
+            .catch(err => console.error('Lỗi tải bảo mật:', err));
+    </script>
+</head>
+<body>
+    <header role="banner">
+        <div id="menu"></div>
+        <div id="clock"></div>
+        <div id="chat"></div>
+    </header>
+
+    <main role="main">
+        <h1>Hello</h1>
+        <p class="fph">ma&pona&pi&toki&Pona</p>
+    </main>
+
+    <footer role="contentinfo">
+        <button class="pdf-btn" onclick="window.print()">📄 Lưu trang này thành PDF</button>
+    </footer>
+
+    <script src="templates/load.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTemplate('menu', 'menu.html');
+            loadTemplate('clock', 'clock.html');
+            loadTemplate('chat', 'chat.html');
+        });
+    </script>
+</body>
+</html>
